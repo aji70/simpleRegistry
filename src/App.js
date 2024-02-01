@@ -5,7 +5,7 @@ import contractABI from "./abi.json";
 
 function App() {
   const contractAddress = "0x7Ffe41574fB691ae157e242a20A81927fEdc2640";
-  const [message, setMessage] = useState([]);
+  const [message, setMessage] = useState(" ");
   const [newName, setnewName] = useState(" ");
   const [newAge, setnewAge] = useState(" ");
 
@@ -78,8 +78,6 @@ function App() {
         setMessage(name1);
 
         console.log(name1);
-
-        // setnewName(transaction);
       } catch (err) {
         console.error("Error:", err);
       }
@@ -89,9 +87,6 @@ function App() {
     setnewName(e.target.value);
   }
 
-  // function handleClearAge(e) {
-  //   setAge(" ");
-  // }
   function handleAgeChange(e) {
     setnewAge(e.target.value);
   }
